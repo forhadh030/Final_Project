@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import { AuthCheck } from 'reactfire';
+import '../Navbar/Navbar.css'
 
 // This makes it easier to call these item to make changes
 const MenuItems = [
@@ -55,7 +57,7 @@ const Button = ({
 
     return(
         <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
-            {children}
+ 
         </button>
     )
 }
@@ -64,14 +66,12 @@ const Button = ({
 export class Navbar extends Component {
     // this means it will start with hamburger. True will start with close("x")
     state = { clicked: false }
-
     handleClick = () => {
         {/* with each click switches between hamburger icon and close("x") */}
         this.setState({clicked: !this.state.clicked})
     }
 
     render() {
-        require('./Navbar.css')
         return(
             <nav className="NavbarItems">
                 <h1 className="navbar-logo">Syed's Garage<i class="fa-solid fa-gears"></i></h1>
@@ -92,7 +92,9 @@ export class Navbar extends Component {
                         )
                     })}
                 </ul>
+                <AuthCheck fallback={
                 <Button>Sign In</Button>
+                }></AuthCheck>
             </nav>
         )
     }

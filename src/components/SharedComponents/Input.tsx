@@ -5,7 +5,8 @@ interface inputType{
     name: string;
     placeholder: string;
 }
-
+// technique for automatically passing a ref through a component to one of its children.
+// Its useful in reusable component library
 export const Input = forwardRef((props:inputType, ref) => {
   return (
     <TextField

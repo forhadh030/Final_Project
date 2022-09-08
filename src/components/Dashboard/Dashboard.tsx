@@ -227,10 +227,10 @@ export const Dashboard = withRouter((props:DashboardProps) => {
                     {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                     </IconButton>
                 </div>
-                {/* This renders an <hr> by default so all data are in columns rather than row*/}
+                {/* Divider renders an <hr> by default */}
                 <Divider />
                 <List>
-                    {itemsList.map((item, index) => { {/* don't get lost here, it's just a map function looping over our itemsList array! */}
+                    {itemsList.map((item, index) => { {/* it's just a map function looping over our itemsList array! */}
                         const { text, onClick } = item;
                         return (
                             <ListItem button key={text} onClick={onClick}>

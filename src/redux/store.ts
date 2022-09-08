@@ -1,4 +1,4 @@
-// This holds the whole state tree of my application.
+// This holds the state tree of my application.
 // Only way to change the state inside is to dispatch an action on it
 
 import { configureStore } from "@reduxjs/toolkit";

@@ -5,7 +5,6 @@ import { chooseName, chooseModel, chooseYear, choosePrice, chooseCarQuality, cho
 import { Input } from '../SharedComponents';
 import { Button } from '@material-ui/core';
 import { server_calls } from '../../api';
-import { required } from 'yargs';
 
 // This page will work in conjecture w/ redux
 
@@ -54,7 +53,9 @@ export const CarForm = (props:carFormProps) => {
   }
   return (
     <div>
-      {/* The form for adding or updating */}
+      {/* The form for adding or updating 
+      This method allows you to register an input or select element 
+      and apply validation rules to React Hook Form. */}
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label htmlFor="name">Make</label>

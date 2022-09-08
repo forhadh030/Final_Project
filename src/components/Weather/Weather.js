@@ -53,7 +53,7 @@ export const Weather = () => {
           </div>
         </div>
 
-        {/* app is empty if no location/zip code is entered */}
+        {/* app is empty if no location is entered */}
         {data.name !== undefined &&
           <div className="bottom">
             <div className="feels">
